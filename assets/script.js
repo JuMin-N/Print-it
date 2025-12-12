@@ -17,27 +17,29 @@ const slides = [
 	}
 ]
 
-let currentSlideIndex = 0
+let currentSlide = 0;
 
-const FlecheGauche = document.getElementById("FlecheGauche")
-const FlecheDroite = document.getElementById("FlecheDroite")
-const bannerImg = document.querySelector(".banner-img")
-const bannerText = document.querySelector("#banner p")
-const dotsContainer = document.querySelector(".dots")
+const bannerImg = document.querySelector(".banner-img");
+const bannerText = document.querySelector("#banner p");
+const dotsContainer = document.querySelector(".dots");
+const flecheGauche = document.getElementById("FlecheGauche");
+const flecheDroite = document.getElementById("FlecheDroite");
+
 
 function createDots() {
 	slides.forEach((slide, index) => {
-		const dot = document.createElement("div")
-		dot.classList.add("dot")
+		const dot = document.createElement("div");
+		dot.classList.add("dot");
 		if (index === 0) {
-			dot.classList.add("dot_selected")
+			dot.classList.add("dot_selected");
 		}
 		dot.addEventListener("click", () => {
-			currentSlideIndex = index
+			currentSlide = index
 			updateSlide()
-		})
-		dotsContainer.appendChild(dot)
-	}
+		});
+		dotsContainer.appendChild(dot);
+	});
+}
 function updateSlide() {
 	bannerImg.src = `assets/images/slideshow/${slides[currentSlideIndex].image}`
 	bannerText.innerHTML = slides[currentSlideIndex].tagLine
