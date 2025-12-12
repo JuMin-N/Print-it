@@ -42,10 +42,10 @@ function createDots() {
 }
 function updateSlide() {
 	bannerImg.src = `assets/images/slideshow/${slides[currentSlideIndex].image}`
-	bannerText.innerHTML = slides[currentSlideIndex].tagLine
+	bannerText.innerHTML = slides[currentSlide].tagLine
 	const dots = document.querySelectorAll(".dot")
 	dots.forEach((dot, index) => {
-		if (index === currentSlideIndex) {
+		if (index === currentSlide) {
 			dot.classList.add("dot_selected")
 		} else {
 			dot.classList.remove("dot_selected")
@@ -53,16 +53,16 @@ function updateSlide() {
 	});
 }
 function nextSlide() {
-	currentSlideIndex++;
-	if (currentSlideIndex >= slides.length) {
-		currentSlideIndex = 0
+	currentSlide++;
+	if (currentSlide >= slides.length) {
+		currentSlide = 0
 	}
 	updateSlide();
 }
 function previousSlide() {
-	currentSlideIndex--;
-	if (currentSlideIndex < 0) {
-		currentSlideIndex = slides.length - 1
+	currentSlide--;
+	if (currentSlide < 0) {
+		currentSlide = slides.length - 1
 	}
 	updateSlide();
 }
