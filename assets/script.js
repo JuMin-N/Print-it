@@ -16,16 +16,6 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-let FlecheGauche = document.getElementById("FlecheGauche")
-FlecheGauche.addEventListener("click", () => {
-    console.log("Image précédente")
-	previousSlide()
-});
-let FlecheDroite = document.getElementById("FlecheDroite")
-FlecheDroite.addEventListener("click", () => {
-    console.log("Image suivante")
-	nextSlide()
-});
 
 let currentSlideIndex = 0
 
@@ -74,3 +64,14 @@ function previousSlide() {
 	}
 	updateSlide();
 }
+
+FlecheGauche.addEventListener("click", () => {
+    console.log("Image précédente")
+	previousSlide()
+});
+FlecheDroite.addEventListener("click", () => {
+    console.log("Image suivante")
+	nextSlide()
+});
+
+createDots()
