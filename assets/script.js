@@ -19,11 +19,15 @@ const slides = [
 let FlecheGauche = document.getElementById("FlecheGauche")
 FlecheGauche.addEventListener("click", () => {
     console.log("Image précédente")
+	previousSlide()
 });
 let FlecheDroite = document.getElementById("FlecheDroite")
 FlecheDroite.addEventListener("click", () => {
     console.log("Image suivante")
+	nextSlide()
 });
+
+let currentSlideIndex = 0
 
 const FlecheGauche = document.getElementById("FlecheGauche")
 const FlecheDroite = document.getElementById("FlecheDroite")
@@ -55,4 +59,18 @@ function updateSlide() {
 			dot.classList.remove("dot_selected")
 		}
 	});
+}
+function nextSlide() {
+	currentSlideIndex++;
+	if (currentSlideIndex >= slides.length) {
+		currentSlideIndex = 0
+	}
+	updateSlide();
+}
+function previousSlide() {
+	currentSlideIndex--;
+	if (currentSlideIndex < 0) {
+		currentSlideIndex = slides.length - 1
+	}
+	updateSlide();
 }
