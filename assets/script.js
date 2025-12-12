@@ -24,3 +24,9 @@ let FlecheDroite = document.getElementById("FlecheDroite")
 FlecheDroite.addEventListener("click", () => {
     console.log("Image suivante")
 });
+
+const FlecheGauche = document.getElementById("FlecheGauche")
+const FlecheDroite = document.getElementById("FlecheDroite")
+const bannerImg = document.querySelector(".banner-img")
+const bannerText = document.querySelector("#banner p")
+const dotsContainer = document.querySelector(".dots")
