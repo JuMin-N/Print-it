@@ -30,3 +30,17 @@ const FlecheDroite = document.getElementById("FlecheDroite")
 const bannerImg = document.querySelector(".banner-img")
 const bannerText = document.querySelector("#banner p")
 const dotsContainer = document.querySelector(".dots")
+
+function createDots() {
+	slides.forEach((slide, index) => {
+		const dot = document.createElement("div")
+		dot.classList.add("dot")
+		if (index === 0) {
+			dot.classList.add("dot_selected")
+		}
+		dot.addEventListener("click", () => {
+			currentSlideIndex = index
+			updateSlide()
+		})
+		dotsContainer.appendChild(dot)
+	}
