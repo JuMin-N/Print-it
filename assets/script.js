@@ -69,11 +69,11 @@ function previousSlide() {
 	updateSlide();
 }
 
-FlecheGauche.addEventListener("click", () => {
+flecheGauche.addEventListener("click", () => {
     console.log("Image précédente")
 	previousSlide()
 });
-FlecheDroite.addEventListener("click", () => {
+flecheDroite.addEventListener("click", () => {
     console.log("Image suivante")
 	nextSlide()
 });
