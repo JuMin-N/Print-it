@@ -44,3 +44,15 @@ function createDots() {
 		})
 		dotsContainer.appendChild(dot)
 	}
+function updateSlide() {
+	bannerImg.src = `assets/images/slideshow/${slides[currentSlideIndex].image}`
+	bannerText.innerHTML = slides[currentSlideIndex].tagLine
+	const dots = document.querySelectorAll(".dot")
+	dots.forEach((dot, index) => {
+		if (index === currentSlideIndex) {
+			dot.classList.add("dot_selected")
+		} else {
+			dot.classList.remove("dot_selected")
+		}
+	});
+}
