@@ -33,15 +33,17 @@ function createDots() {
 		if (index === 0) {
 			dot.classList.add("dot_selected");
 		}
+
 		dot.addEventListener("click", () => {
 			currentSlide = index
-			updateSlide()
+			updateSlide();
 		});
+
 		dotsContainer.appendChild(dot);
 	});
 }
 function updateSlide() {
-	bannerImg.src = `assets/images/slideshow/${slides[currentSlideIndex].image}`
+	bannerImg.src = `assets/images/slideshow/${slides[currentSlide].image}`
 	bannerText.innerHTML = slides[currentSlide].tagLine
 	const dots = document.querySelectorAll(".dot")
 	dots.forEach((dot, index) => {
