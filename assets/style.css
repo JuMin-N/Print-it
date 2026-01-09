@@ -334,5 +334,5 @@ footer div {
 	background-image: url('./images/slideshow/slide3.jpg');
 }
 .dot:nth-child(4)::before {
-	background-image: url('./images/slideshow/slide4.jpg');
+	background-image: url('./images/slideshow/slide4.png');
 }
