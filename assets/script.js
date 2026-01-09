@@ -30,10 +30,13 @@ function createDots() {
 	slides.forEach((slide, index) => {
 		const dot = document.createElement("div");
 		dot.classList.add("dot");
+
+		dot.style.setProperty('--thumbnail-url', `url(assets/images/slideshow/${slide.image})`);
+		
 		if (index === 0) {
 			dot.classList.add("dot_selected");
 		}
-
+			
 		dot.addEventListener("click", () => {
 			currentSlide = index
 			updateSlide();
