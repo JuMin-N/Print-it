@@ -306,7 +306,7 @@ footer div {
 	position: absolute;
 	bottom: 25px;
 	left: 50%;
-	transform: translateX(-50%);scale(0);
+	transform: translateX(-50%)scale(0);
 	width: 120px;
 	height: 80px;
 	background-size: cover;
