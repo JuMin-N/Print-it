@@ -325,14 +325,14 @@ footer div {
 }
 /* Ajout images de fond pour chaque point */
 .dot:nth-child(1)::before {
-	background-image: url('./images/point1.png');
+	background-image: url('./images/slideshow/slide1.jpg');
 }
 .dot:nth-child(2)::before {
-	background-image: url('./images/point2.png');
+	background-image: url('./images/slideshow/slide2.jpg');
 }
 .dot:nth-child(3)::before {
-	background-image: url('./images/point3.png');
+	background-image: url('./images/slideshow/slide3.jpg');
 }
 .dot:nth-child(4)::before {
-	background-image: url('./images/point4.png');
+	background-image: url('./images/slideshow/slide4.jpg');
 }
